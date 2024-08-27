@@ -1,0 +1,10 @@
+body {
+    margin: 0, auto;
+    color: #586E75;
+    background-color: #F5F7FA;
+  }
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
