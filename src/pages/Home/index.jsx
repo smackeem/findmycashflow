@@ -1,33 +1,52 @@
-import { useEffect } from 'react';
-import M from 'materialize-css';
+import HeroSection from '../Hero';
+import AboutSection from '../AboutSection';
+import CertificateSection from '../FinanceCert';
+import ConnectSection from '../Statement';
+import Services from '../Services';
+import FreqAskedQuestions from '../FAQ'
 import './home.css';
-import planImg from '../../assets/plan.jpeg'
+
 
 const Home = () => {
-  useEffect(() => {
-    const elems = document.querySelectorAll('.parallax');
-    M.Parallax.init(elems);
-  }, []);
+
 
   return (
-    <div id="index-banner" className="parallax-container fm">
-      <div className="section no-pad-bot">
-        <div className="section no-pad-bot">
-          <div className="container">
-            <br />
-            <br />
-            <h1 className="header center teal-text text-lighten-2">Find My Cash Flow</h1>
-            <div className="row center">
-              <h5 className="header col s12 light">A modern responsive front-end framework based on Material design</h5>
-            </div>
-          </div>
-        </div>
-       
+    <>
+      <HeroSection />
+      <div className="container">
+        <br />
+        <br />
+        <AboutSection />
+        <br />
+        <br />
+        <hr />
+        <br />
+        <CertificateSection />
+
+        <br />
+        <hr />
+        <br />
+        <br />
+        <Services />
+        <br />
       </div>
-      <div className="parallax">
-        <img src={planImg} alt="Unsplashed background img 1" />
+      <div className="container">
+        <br />
+        <hr />
+        <br />
+        <br />
+        <FreqAskedQuestions />
+        <br />
+        <br />
+        <hr />
+        <br />
+        <br />
+        <ConnectSection />
+        <br />
+        <br />
       </div>
-    </div>
+
+    </>
   );
 };
 

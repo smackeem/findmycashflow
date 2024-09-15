@@ -1,76 +1,91 @@
-// AboutSection.js
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import headshot from '../../assets/chri-headshot.jpg';
-
-
-const AboutContainer = styled.div`
-  padding: 4rem 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-`;
-
-const Card = styled(motion.div)`
-  background: white;
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-`;
-
-const CardImage = styled.img`
-  max-width: 100%;
-  max-height: 287px;
-  margin-bottom: 1rem;
-`;
-
-const CardTitle = styled.h3`
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-`;
-
-const CardDescription = styled.p`
-  color: #666;
-`;
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import headshot from "../../assets/chri-headshot.jpg";
+import mission from "../../assets/green-bulb.jpg";
+import team from "../../assets/team.jpg";
 
 const AboutSection = () => {
   return (
-    <AboutContainer className='container'>
-      <Card whileHover={{ scale: 1.05 }}>
-        <CardImage src="https://picsum.photos/id/1/200/200" alt="Mission" />
-        <CardTitle>Mission/Vision</CardTitle>
-        <CardDescription>
-        I start by documenting your goals and then compare them to your
-                current portfolio. I use proven investment strategies designed
-                to meet your risk tolerance and stand up against market
-                volatility. And you can count on unbiased recommendations and
-                impartial guidance based directly on your needs and goals.
-        </CardDescription>
-      </Card>
-      <Card whileHover={{ scale: 1.05 }}>
-        <CardImage src={headshot} alt="About Me" />
-        <CardTitle>About Me</CardTitle>
-        <CardDescription>
-        Since 1999, I&apos;ve been helping businesses and individuals
-                safeguard their assets and plan for the retirement they want.
-                When I&apos;m not working, I enjoy sailing, cooking, and playing
-                with my 2 dogs.
-        </CardDescription>
-      </Card>
-      <Card whileHover={{ scale: 1.05 }}>
-        <CardImage src="https://picsum.photos/id/1/200/200" alt="Who We Serve" />
-        <CardTitle>Who We Serve</CardTitle>
-        <CardDescription>
-        I&apos;m passionate about helping both companies and individuals with
-                diversifying portfolios, managing assets, analyzing market
-                trends, and reducing financial risk. <strong>My goal?</strong> To safeguard the
-                dreams you strived to achieve and the assets you have worked so
-                hard to accumulate. I use proven investment strategies designed
-                to meet your risk tolerance and hedge against market volatility.
-        </CardDescription>
-      </Card>
-    </AboutContainer>
+    <div id="aboutsection" className="mx-auto max-w-7xl p-6 lg:p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      {/* Card 1: Mission */}
+      <motion.div
+        className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between text-center transition-shadow duration-300 hover:shadow-2xl"
+        whileHover={{ scale: 1.05 }}
+      >
+        <img
+          className="mx-auto mb-4 w-full h-64 object-cover rounded-lg"
+          src={mission}
+          alt="Mission"
+        />
+        <div className="flex-grow">
+          <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+            Mission
+          </h3>
+          <p className="text-gray-700 mb-6">
+            Unlock the growth potential of Entrepreneurs and Small Business Owners, 
+            like yourself, who aspire to drive sustainable change in your Lives, Businesses, 
+            and Communities.
+          </p>
+        </div>
+        <Link to="/elevating-business">
+        <button className="bg-customBlue text-white py-2 px-6 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300 mt-4">
+          Learn More
+        </button>
+        </Link>
+      </motion.div>
+
+      {/* Card 2: About the Founder */}
+      <motion.div
+        className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between text-center transition-shadow duration-300 hover:shadow-2xl"
+        whileHover={{ scale: 1.05 }}
+      >
+        <img
+          className="mx-auto mb-4 w-full h-64 object-cover rounded-lg"
+          src={headshot}
+          alt="About Me"
+        />
+        <div className="flex-grow">
+          <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+            About the Founder
+          </h3>
+          <p className="text-gray-700 mb-6">
+            Christopher Denham is a seasoned business professional whose career in corporate finance spans over 18 years. He has made significant contributions to Fortune 500 companies, optimizing cash flow and negotiating billion-dollar transactions that have saved millions.
+          </p>
+        </div>
+        <Link to="/founder">
+        <button className="bg-customBlue text-white py-2 px-6 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300 mt-4">
+          Learn More
+        </button>
+        </Link>
+      </motion.div>
+
+      {/* Card 3: Elevating Your Business */}
+      <motion.div
+        className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between text-center transition-shadow duration-300 hover:shadow-2xl"
+        whileHover={{ scale: 1.05 }}
+      >
+        <img
+          className="mx-auto mb-4 w-full h-64 object-cover rounded-lg"
+          src={team}
+          alt="Elevating Your Business"
+        />
+        <div className="flex-grow">
+          <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+            Elevating Your Business
+          </h3>
+          <p className="text-gray-700 mb-6">
+            I specialize in consulting services for entrepreneurs, small businesses, and CEOs. From strategic growth initiatives to personalized cash flow techniques, I help you scale your business efficiently and sustainably.
+          </p>
+        </div>
+        <Link to="/elevating-business">
+        <button className="bg-customBlue text-white py-2 px-6 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300 mt-4">
+          Learn More
+        </button>
+        </Link>
+      </motion.div>
+      
+    </div>
   );
 };
 

@@ -1,56 +1,126 @@
-import headshot from '../../assets/chri-headshot.jpg';
+import { motion } from "framer-motion";
+import headshot from "../../assets/chri-headshot.jpg";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="container mx-auto ">
-      <h1 className="text-3xl font-bold text-center mb-4">ABOUT</h1>
-      <hr className="my-4"/>
-      <div className="section">
-        <div className="sm:flex sm:space-x-8">
-          <div className="col s12 m4 mb-8 sm:mb-0">
-            <div className="icon-block text-center">
-              <img src="https://picsum.photos/id/2/300/300" alt="Making & Meeting Goals" className="w-32 h-32 sm:w-48 sm:h-48 rounded-full mx-auto mb-4"/>
-              <h5 className="text-xl font-semibold mb-2">Vision/Mission</h5>
-              <p className="text-gray-700">
-                I start by documenting your goals and then compare them to your
-                current portfolio. I use proven investment strategies designed
-                to meet your risk tolerance and stand up against market
-                volatility. And you can count on unbiased recommendations and
-                impartial guidance based directly on your needs and goals.
-              </p>
-            </div>
-          </div>
+    <div id="aboutpage" className="container mx-auto px-6 lg:px-8 py-12">
+      {/* Hero Section */}
+      <div className="lg:flex lg:space-x-12 mb-12">
+        {/* Image Section */}
+        <div className="lg:w-1/2 text-center lg:text-left">
+          <motion.img
+            src={headshot}
+            alt="Christopher Denham"
+            className="rounded-full lg:rounded-lg mx-auto lg:mx-0 w-64 h-64 lg:w-80 lg:h-80 object-cover shadow-lg transition-transform duration-300 ease-in-out hover:scale-105"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+          />
+        </div>
 
-          <div className="col s12 m4 mb-8 sm:mb-0">
-            <div className="icon-block text-center">
-              <img src={headshot} alt="About" className="w-32 h-32 sm:w-48 sm:h-48 rounded-full mx-auto mb-4"/>
-              <h5 className="text-xl font-semibold mb-2">About Me</h5>
-              <p className="text-gray-700">
-                Since 1999, I&apos;ve been helping businesses and individuals
-                safeguard their assets and plan for the retirement they want.
-                When I&apos;m not working, I enjoy sailing, cooking, and playing
-                with my 2 dogs.
-              </p>
-            </div>
-          </div>
-
-          <div className="col s12 m4">
-            <div className="icon-block text-center">
-              <img src="https://picsum.photos/id/1/200/300" alt="Building Strong Futures" className="w-32 h-32 sm:w-48 sm:h-48 rounded-full mx-auto mb-4"/>
-              <h5 className="text-xl font-semibold mb-2">Target Audience</h5>
-              <p className="text-gray-700">
-                I&apos;m passionate about helping both companies and individuals with
-                diversifying portfolios, managing assets, analyzing market
-                trends, and reducing financial risk. <strong>My goal?</strong> To safeguard the
-                dreams you strived to achieve and the assets you have worked so
-                hard to accumulate. I use proven investment strategies designed
-                to meet your risk tolerance and hedge against market volatility.
-              </p>
-            </div>
-          </div>
+        {/* Intro Text Section */}
+        <div className="lg:w-1/2 flex flex-col justify-center mt-6 lg:mt-0">
+          <h1 className="text-4xl font-bold text-customBlue">
+            Christopher Denham
+          </h1>
+          <p className="text-lg font-sans text-gray-600 mt-2">
+            Founder & Visionary behind <span className="text-customBlue">Find My CashFlow</span>
+          </p>
         </div>
       </div>
-      <hr className="mt-4"/>
+
+      {/* About Section */}
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-2xl font-bold text-customBlue mb-6">About Me</h2>
+
+        {/* Bio Content */}
+        <motion.div
+          className="space-y-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Christopher Denham is a seasoned business professional whose career
+            in corporate finance spans over 18 years. With a remarkable track
+            record of driving financial efficiency and operational excellence,
+            Chris has made significant contributions to Fortune 500 companies
+            and medium-sized organizations alike. His expertise lies in
+            optimizing cash flow, implementing cost-saving strategies, and
+            negotiating billion-dollar transactions that have collectively saved
+            companies millions of dollars.
+          </p>
+
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Christopher&apos;s career is distinguished by his ability to manage
+            complex, high-stakes financial operations. He has successfully
+            overseen international multimillion dollar tri-party deals, working
+            closely with both domestic and international highly regulated
+            institutions. His strategic leadership and visionary approach have
+            consistently delivered sustainable profitability, making him a
+            sought-after expert in the field of corporate treasury.
+          </p>
+
+          <p className="text-lg text-gray-600 leading-relaxed">
+            In his last role on AIG&apos;s Treasury Team, Christopher served as the
+            Head of Collateral Management, where he managed collateral
+            securities exceeding $35 billion. His efforts in developing monthly
+            management reporting of key assets led to a significant reduction in
+            the loss of contingent liquidity. Prior to this, as Assistant
+            Director of Treasury, he co-led the amendment of a $4.5 billion
+            Senior Unsecured Revolving Credit Facility, helping negotiate
+            reduced pricing that resulted in millions in savings over the next
+            five years. His thought leadership strategy on a cash flow
+            initiative for one of AIG&apos;s billion books of business led to a
+            savings of over a $1 million annually.
+          </p>
+
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Christopher is not only a skilled negotiator and financial
+            strategist but also a visionary change agent. He has a proven
+            ability to align teams, improve opportunities for direct reports,
+            and implement best practices that drive organizational success. His
+            leadership extends to talent management and succession planning, as
+            evidenced by his successful grooming of a successor before his
+            planned departure from AIG in 2023.
+          </p>
+
+          <p className="text-lg text-gray-600 leading-relaxed">
+            A Certified Treasury Professional since 2012, Chris has also
+            contributed to the development of future exams in consultation with
+            the Association for Financial Professionals (AFP). His expertise has
+            earned him invitations to join the AFP&apos;s board of directors, further
+            cementing his reputation as a leader in the field of corporate
+            finance.
+          </p>
+
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Christopher Denham&apos;s career is a testament to his deep financial
+            acumen, operational proficiency, and unwavering commitment to
+            driving sustainable growth and profitability in every organization
+            he serves.
+          </p>
+
+          {/* Blockquote */}
+          <blockquote className="italic text-gray-600 border-l-4 border-customBlue pl-4">
+            &rdquo;Christopher is a visionary change agent with an unwavering
+            commitment to sustainable growth.&rdquo;
+          </blockquote>
+        </motion.div>
+      </div>
+
+      {/* Optional CTA */}
+      <div className="text-center mt-12">
+        <Link to="/elevating-business">
+        <motion.button
+          className="bg-customBlue text-white rounded-full px-6 py-3 hover:bg-blue-700 transition-colors"
+          whileHover={{ scale: 1.05 }}
+        >
+          Learn More About Our Mission
+        </motion.button>
+        </Link>
+      </div>
     </div>
   );
 };

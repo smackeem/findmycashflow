@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const services = [
   {
     title: "Cash Flow Analysis",
@@ -12,32 +14,41 @@ const services = [
     description: "We work with you to develop strategies to increase your revenue. From pricing strategies to sales tactics, we provide comprehensive solutions tailored to your business needs."
   },
   {
-    title: "Financial Planning",
+    title: "Strategic Financial Planning",
     description: "Our financial planning services help you create a roadmap for your business's financial future. We assist with budgeting, forecasting, and setting financial goals to ensure long-term success."
   }
 ];
 
 const Services = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-12 md:gap-x-6 md:gap-y-12">
-        <div className="md:col-span-3">
-          <h1 className="text-2xl font-bold mb-6">Our Services</h1>
-          <p className="text-gray-500">Explore our tailored financial services designed to elevate your business&apos;s performance and secure its long-term success.</p>
+    <div id="services" className="mx-auto max-w-7xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-x-12 gap-y-12">
+      {/* Left Section: Title and Intro */}
+      <div className="lg:col-span-3 mb-8 lg:mb-0">
+        <h1 className="text-4xl font-bold text-customBlue mb-6">Our Services</h1>
+        <p className="text-gray-500">
+          Explore our tailored financial services designed to elevate your business&apos;s performance and secure its long-term success.
+        </p>
+      </div>
 
-        </div>
-        <div className="md:col-span-9">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-lg p-4 ">
-              <h2 className="text-xl font-semibold mb-2">
-                {service.title}
-              </h2>
-              <p className="text-gray-700">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </div>
+      {/* Right Section: Services Cards */}
+      <div className="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-6">
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            className="bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300"
+            initial={{ opacity: 0, translateY: 20 }}
+            animate={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{ scale: 1.05 }}
+          >
+            <h2 className="text-2xl font-semibold text-gray-900 mb-3 group-hover:text-customBlue transition-colors duration-300">
+              {service.title}
+            </h2>
+            <p className="text-gray-700">
+              {service.description}
+            </p>
+          </motion.div>
+        ))}
       </div>
     </div>
   );

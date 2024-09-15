@@ -39,7 +39,7 @@ const Socials = () => {
       <h1 className="text-2xl font-semibold mb-4 sm:text-center">Follow Us on Social Media</h1>
       <div className="flex space-x-6 sm:justify-center sm:content-center">
         <SocialLink
-          href="https://www.instagram.com"
+          href="https://www.instagram.com/findmycashflow/"
           target="_blank"
           rel="noopener noreferrer"
           bgColor="#E1306C"
@@ -51,7 +51,7 @@ const Socials = () => {
           <FaInstagram />
         </SocialLink>
         <SocialLink
-          href="https://www.facebook.com"
+          href="https://www.facebook.com/FindMyCashflow/"
           target="_blank"
           rel="noopener noreferrer"
           bgColor="#1877F2"
@@ -63,7 +63,7 @@ const Socials = () => {
           <FaFacebook />
         </SocialLink>
         <SocialLink
-          href="https://www.linkedin.com"
+          href="https://www.linkedin.com/in/christopherdenham/"
           target="_blank"
           rel="noopener noreferrer"
           bgColor="#0A66C2"
@@ -75,7 +75,7 @@ const Socials = () => {
           <FaLinkedin />
         </SocialLink>
         <SocialLink
-          href="https://www.youtube.com"
+          href="https://www.youtube.com/@FindMyCashflow"
           target="_blank"
           rel="noopener noreferrer"
           bgColor="#FF0000"

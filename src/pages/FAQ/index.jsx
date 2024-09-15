@@ -1,99 +1,80 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 
-const accordionItems = [
+const reasons = [
   {
-    title: "What is your return policy?",
-    content: "You can return any item within 30 days of purchase for a full refund.",
+    title: "Growth Has Stagnated",
+    content: "Your business isn't growing like it used to, and you're not sure what steps to take next. A consultant can help identify opportunities for growth and scale your operations effectively.",
   },
   {
-    title: "Do you offer international shipping?",
-    content: "Yes, we ship to most countries worldwide. Shipping fees and delivery times may vary.",
+    title: "Inconsistent Cash Flow",
+    content: "Are your revenue streams unpredictable? A consultant can analyze your financials, helping you stabilize income and plan for sustainable growth.",
   },
   {
-    title: "How can I track my order?",
-    content: "Once your order is shipped, you will receive a tracking number via email.",
+    title: "Unclear Business Goals",
+    content: "If you're operating without clear, actionable goals, or if your objectives feel scattered, it’s time to bring in a consultant who can help you establish a focused roadmap.",
   },
   {
-    title: "How can I track my order?",
-    content: "Once your order is shipped, you will receive a tracking number via email.",
+    title: "Overwhelmed with Daily Operations",
+    content: "Are you constantly firefighting, buried under tasks, and struggling to focus on big-picture strategies? A consultant can streamline your processes and help you regain control.",
   },
   {
-    title: "How can I track my order?",
-    content: "Once your order is shipped, you will receive a tracking number via email.",
+    title: "Difficulty in Decision Making",
+    content: "If you find yourself stuck or second-guessing every decision, a business coach can provide clarity, helping you make confident and informed choices.",
+  },
+  {
+    title: "Outdated Business Practices",
+    content: "If your business operations or strategies haven’t evolved with the times, a consultant can introduce modern techniques and tools to keep you competitive.",
+  },
+  {
+    title: "Uncertainty About Financial Health",
+    content: "If you’re unsure about your business’s financial status, a coach can help you gain clarity, ensuring you understand your financials and make decisions that drive profitability.",
   },
 ];
 
-const FreqAskedQuestions = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
+const ReasonsToHireConsultant = () => {
   return (
-    <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-14 gap-y-16 lg:max-w-5xl lg:px-8 xl:max-w-none xl:grid-cols-12 xl:px-0">
-      <div className="xl:col-span-3">
-        <h1 className="text-3xl font-bold mb-4">Frequently Asked Questions</h1>
+    <div id="reasons" className="mx-auto max-w-7xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-x-12">
+      {/* Left Section: Title */}
+      <div className="lg:col-span-3 mb-8 lg:mb-0">
+        <h1 className="text-4xl font-bold text-customBlue mb-4 lg:mb-6">
+          7 Reasons You May Need A Business Consultant
+        </h1>
         <p className="text-gray-500">
-          Please contact us if you cannot find an answer to your question.
+          Still uncertain? Contact us for tailored advice on how a business consultant can help you thrive.
         </p>
       </div>
-      <div className="xl:col-span-9">
-        
-        {accordionItems.map((item, index) => (
-          <div key={index}>
-            <button
-              type="button"
-              className={`flex items-center focus:bg-transparent justify-between w-full py-5 font-medium text-gray-900 border-b border-gray-200 dark:text-gray-400 gap-3 transition-colors duration-300 ${
-                activeIndex === index ? "bg-white dark:bg-gray-900 dark:text-white" : ""
-              }`}
-              aria-expanded={activeIndex === index}
-              aria-controls={`accordion-flush-body-${index + 1}`}
-              onClick={() => toggleFAQ(index)}
+
+      {/* Right Section: Numbered List */}
+      <div className="lg:col-span-9">
+        <ol className="space-y-8">
+          {reasons.map((item, index) => (
+            <motion.li
+              key={index}
+              className="group relative flex items-start"
+              initial={{ opacity: 0, translateY: 20 }}
+              animate={{ opacity: 1, translateY: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <span>{item.title}</span>
-              <motion.svg
-                data-accordion-icon
-                className={`w-3 h-3 transition-transform duration-300 ${
-                  activeIndex === index ? "rotate-180" : ""
-                } shrink-0`}
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-                initial={{ rotate: 0 }}
-                animate={{ rotate: activeIndex === index ? 180 : 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M9 5 5 1 1 5"
-                />
-              </motion.svg>
-            </button>
-            <motion.div
-              id={`accordion-flush-body-${index + 1}`}
-              className={`${
-                activeIndex === index ? "block" : "hidden"
-              } transition-all duration-300 ease-in-out transform py-5 border-b border-gray-200 dark:border-gray-700`}
-              initial={{ height: 0, opacity: 0 }}
-              animate={{
-                height: activeIndex === index ? "auto" : 0,
-                opacity: activeIndex === index ? 1 : 0,
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              <p className="text-gray-600 dark:text-gray-400">{item.content}</p>
-            </motion.div>
-          </div>
-        ))}
+              {/* Number Circle */}
+              <div className="flex-shrink-0 mr-6">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-customBlue text-white font-semibold text-xl">
+                  {index + 1}
+                </div>
+              </div>
+
+              {/* Content */}
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 group-hover:text-customBlue transition-colors duration-300">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 mt-2">{item.content}</p>
+              </div>
+            </motion.li>
+          ))}
+        </ol>
       </div>
     </div>
   );
 };
 
-export default FreqAskedQuestions;
+export default ReasonsToHireConsultant;

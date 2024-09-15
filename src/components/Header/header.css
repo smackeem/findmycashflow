@@ -1,0 +1,7 @@
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;  /* Aligns the dropdown to the right edge of the parent */
+    left: auto; /* Cancels any left positioning that may push it off screen */
+  }
+  

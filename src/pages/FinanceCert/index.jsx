@@ -14,7 +14,7 @@ const CertificateSection = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center lg:items-start p-8 bg-gradient-to-l from-[#1B263B] via-[#0D4A71] to-[#1B263B] shadow-lg rounded-lg mb-8">
+    <div id="cert" className="flex flex-col lg:flex-row items-center lg:items-start p-8 bg-gradient-to-l from-[#1B263B] via-[#0D4A71] to-[#1B263B] shadow-lg rounded-lg my-8">
       {/* Certificate Image */}
       <motion.img
         src={certImg}

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import logoImg from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 const NavbarContainer = styled.nav`
   position: sticky;
@@ -11,7 +12,7 @@ const NavbarContainer = styled.nav`
   background: transparent;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  
   padding: 1rem 2rem;
   transition: background 0.3s ease, box-shadow 0.3s ease;
   z-index: 1000;  // Ensure the navbar stays above other elements
@@ -54,6 +55,7 @@ const Navbar = () => {
         />
       </Logo>
       {/* Add additional links or a hamburger menu here */}
+      <Link to="">About</Link>
     </NavbarContainer>
   );
 };

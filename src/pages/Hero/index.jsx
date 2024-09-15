@@ -1,6 +1,7 @@
 // HeroSection.js
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { HashLink as Link} from 'react-router-hash-link';
 
 // background: url('/path-to-image.jpg') no-repeat center center/cover;
 const HeroContainer = styled.div`
@@ -39,16 +40,17 @@ const CTAButton = styled(motion.button)`
 
 const HeroSection = () => {
   return (
-    <HeroContainer className='bg-gradient-to-l from-[#1B263B] via-[#0D4A71] to-[#1B263B]'>
+    <HeroContainer id="hero" className='bg-gradient-to-l from-[#1B263B] via-[#0D4A71] to-[#1B263B]'>
       <Heading initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }}>
-        Empowering Financial Freedom
+        Empowering Financial Flexibility
       </Heading>
       <Subheading initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.2 }}>
-        Your journey to financial stability starts here
+        Your business journey to financial sustainable stability starts here
       </Subheading>
-      <CTAButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        Learn More
+      <Link to="#footer"><CTAButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        Contact Us
       </CTAButton>
+      </Link>
     </HeroContainer>
   );
 };

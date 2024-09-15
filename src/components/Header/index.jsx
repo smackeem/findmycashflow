@@ -1,31 +1,13 @@
-import React from 'react';
-
-import logoImg from '../../assets/logo.png'
-import styled from 'styled-components';
-
-const NavbarContainer = styled.nav`
-  position: sticky;
-  top: 0;
-  width: 100%;
-  min-height: 8rem;
-  background: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-  z-index: 1000;  // Ensure the navbar stays above other elements
-
-  &.scrolled {
-    background: #F5F7FA;  // Light gray color on scroll
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  // Subtle shadow to give depth
-    }
-    `;
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import logoImg from '../../assets/logo.png';
 
 const Header = () => {
-  const [scrolled, setScrolled] = React.useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  React.useEffect(() => {
+  // Handle scroll effect for the sticky navbar
+  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
@@ -36,21 +18,71 @@ const Header = () => {
     };
   }, []);
 
+  // Toggle dropdown open/close
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
-    // <nav className="white min-h-32 p-10 bg-gradient-to-l from-[#1B263B] via-[#0D4A71] to-[#1B263B]" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }} role="navigation">
-    // <nav className="white min-h-32 p-10" style={{ display: 'flex', backgroundColor: '#F5F7FA', alignItems: 'center', justifyContent: 'center' }} role="navigation">
-    <NavbarContainer className={scrolled ? 'scrolled' : ''}>
-      <div className="nav-wrapper mt-4 container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <img
-          className="brand-logo"
-          id='logo-container'
-          src={logoImg}
-          alt="logo"
-          style={{ maxHeight: '150px', width: 'auto'}}
-        />
+    <nav
+      className={`sticky top-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+      }`}
+    >
+      <div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-6">
+        {/* Logo */}
+        <Link to="/">
+          <img src={logoImg} alt="logo" className="h-16 md:h-24" />
+        </Link>
+
+        {/* Nav Items */}
+        <ul className="flex items-center space-x-8">
+          {/* Home Link */}
+          <li>
+            <Link
+              to="/"
+              className="text-lg text-[#0D4A71] font-medium hover:text-[#1B263B] transition-colors"
+            >
+              Home
+            </Link>
+          </li>
+
+          {/* About Dropdown */}
+          <li className="relative">
+            <button
+              onClick={toggleDropdown}
+              className="text-lg text-[#0D4A71] font-medium hover:text-[#1B263B] transition-colors focus:outline-none"
+            >
+              About
+            </button>
+
+            {/* Dropdown Menu */}
+            <ul
+              className={`absolute top-full mt-2 left-0 bg-white border border-gray-200 rounded-lg shadow-lg py-2 w-56 transition-transform duration-300 ${
+                isDropdownOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none'
+              }`}
+            >
+              <li>
+                <Link
+                  to="/founder"
+                  className="block px-4 py-2 text-[#0D4A71] hover:bg-gray-100 transition-colors"
+                >
+                  The Founder
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/elevating-business"
+                  className="block px-4 py-2 text-[#0D4A71] hover:bg-gray-100 transition-colors"
+                >
+                  Elevating Your Business
+                </Link>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
-      </NavbarContainer >
-    
+    </nav>
   );
 };
 
