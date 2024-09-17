@@ -112,7 +112,7 @@ const About = () => {
 
       {/* Optional CTA */}
       <div className="text-center mt-12">
-        <Link to="/elevating-business">
+        <Link to="/elevate-your-business">
         <motion.button
           className="bg-customBlue text-white rounded-full px-6 py-3 hover:bg-blue-700 transition-colors"
           whileHover={{ scale: 1.05 }}

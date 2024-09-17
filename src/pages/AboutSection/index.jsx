@@ -28,7 +28,7 @@ const AboutSection = () => {
             and Communities.
           </p>
         </div>
-        <Link to="/elevating-business">
+        <Link to="/elevate-your-business">
         <button className="bg-customBlue text-white py-2 px-6 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300 mt-4">
           Learn More
         </button>
@@ -78,7 +78,7 @@ const AboutSection = () => {
             I specialize in consulting services for entrepreneurs, small businesses, and CEOs. From strategic growth initiatives to personalized cash flow techniques, I help you scale your business efficiently and sustainably.
           </p>
         </div>
-        <Link to="/elevating-business">
+        <Link to="/elevate-your-business">
         <button className="bg-customBlue text-white py-2 px-6 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300 mt-4">
           Learn More
         </button>
