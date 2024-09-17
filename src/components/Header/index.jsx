@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png"
 
 const Header = () => {
@@ -10,23 +9,23 @@ const Header = () => {
       <nav className="flex justify-between items-center mx-5">
         {/* Logo */}
         <div className="flex items-center">
-          <Link to="/">
+          <a href="/">
             <img
               src={logo}
               alt="Logo"
               className="h-24 transition-transform transform hover:scale-105"
             />
-          </Link>
+          </a>
         </div>
 
         {/* Menu Items */}
         <div className="flex items-center space-x-6">
-          <Link
-            to="/"
+          <a
+            href="/"
             className="text-lg font-semibold text-[#0D4A71] hover:text-gray-700 transition duration-300"
           >
             Home
-          </Link>
+          </a>
 
           <div className="relative">
             {/* About Menu */}

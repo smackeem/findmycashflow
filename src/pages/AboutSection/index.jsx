@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import headshot from "../../assets/chri-headshot.jpg";
 import mission from "../../assets/green-bulb.jpg";
 import team from "../../assets/team.jpg";
@@ -28,11 +27,11 @@ const AboutSection = () => {
             and Communities.
           </p>
         </div>
-        <Link to="/elevate-your-business">
+        <a href="/elevate-your-business">
         <button className="bg-customBlue text-white py-2 px-6 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300 mt-4">
           Learn More
         </button>
-        </Link>
+        </a>
       </motion.div>
 
       {/* Card 2: About the Founder */}
@@ -53,11 +52,11 @@ const AboutSection = () => {
             Christopher Denham is a seasoned business professional whose career in corporate finance spans over 18 years. He has made significant contributions to Fortune 500 companies, optimizing cash flow and negotiating billion-dollar transactions that have saved millions.
           </p>
         </div>
-        <Link to="/founder">
+        <a href="/founder">
         <button className="bg-customBlue text-white py-2 px-6 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300 mt-4">
           Learn More
         </button>
-        </Link>
+        </a>
       </motion.div>
 
       {/* Card 3: Elevating Your Business */}
@@ -78,11 +77,11 @@ const AboutSection = () => {
             I specialize in consulting services for entrepreneurs, small businesses, and CEOs. From strategic growth initiatives to personalized cash flow techniques, I help you scale your business efficiently and sustainably.
           </p>
         </div>
-        <Link to="/elevate-your-business">
+        <a href="/elevate-your-business">
         <button className="bg-customBlue text-white py-2 px-6 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300 mt-4">
           Learn More
         </button>
-        </Link>
+        </a>
       </motion.div>
       
     </div>

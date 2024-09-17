@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import headshot from "../../assets/chri-headshot.jpg";
-import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -112,14 +111,14 @@ const About = () => {
 
       {/* Optional CTA */}
       <div className="text-center mt-12">
-        <Link to="/elevate-your-business">
+        <a href="/elevate-your-business">
         <motion.button
           className="bg-customBlue text-white rounded-full px-6 py-3 hover:bg-blue-700 transition-colors"
           whileHover={{ scale: 1.05 }}
         >
           Learn More About Our Mission
         </motion.button>
-        </Link>
+        </a>
       </div>
     </div>
   );
