@@ -62,7 +62,7 @@ const About = () => {
           </p>
 
           <p className="text-lg text-gray-600 leading-relaxed">
-            In his last role on AIG&apos;s Treasury Team, Christopher served as the
+            In his last role in AIG&apos;s Treasury Team, Christopher served as the
             Head of Collateral Management, where he managed collateral
             securities exceeding $35 billion. His efforts in developing monthly
             management reporting of key assets led to a significant reduction in
@@ -89,7 +89,7 @@ const About = () => {
             A Certified Treasury Professional since 2012, Chris has also
             contributed to the development of future exams in consultation with
             the Association for Financial Professionals (AFP). His expertise has
-            earned him invitations to join the AFP&apos;s board of directors, further
+            earned him an invitation to apply to join the AFP&apos;s board of directors, further
             cementing his reputation as a leader in the field of corporate
             finance.
           </p>
@@ -116,7 +116,7 @@ const About = () => {
           className="bg-customBlue text-white rounded-full px-6 py-3 hover:bg-blue-700 transition-colors"
           whileHover={{ scale: 1.05 }}
         >
-          Learn More About Our Mission
+          Learn More About My Mission
         </motion.button>
         </a>
       </div>

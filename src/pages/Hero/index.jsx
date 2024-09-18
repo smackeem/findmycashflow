@@ -45,10 +45,10 @@ const HeroSection = () => {
         Empowering Financial Flexibility
       </Heading>
       <Subheading initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.2 }}>
-        Your business journey to financial sustainable stability starts here
+        Your business journey to financial sustainable stability starts here!
       </Subheading>
       <Link to="#footer"><CTAButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-        Contact Us
+        Contact Me
       </CTAButton>
       </Link>
     </HeroContainer>

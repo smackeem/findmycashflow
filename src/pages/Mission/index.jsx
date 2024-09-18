@@ -8,7 +8,7 @@ const MissionPage = () => {
       
       {/* Mission Statement Section */}
       <div className="max-w-4xl mx-auto mb-12 text-center">
-        <h1 className="text-4xl font-bold text-customBlue mb-6">Our Mission</h1>
+        <h1 className="text-4xl font-bold text-customBlue mb-6">My Mission</h1>
         <motion.p
           className="text-lg text-gray-600 leading-relaxed mb-6"
           initial={{ opacity: 0 }}

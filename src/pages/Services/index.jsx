@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 const services = [
   {
     title: "Cash Flow Analysis",
-    description: "Our expert team will thoroughly analyze your business's cash flow to identify any inefficiencies and areas for improvement. We'll provide detailed reports and actionable insights to help you optimize your financial operations."
+    description: "As an expert, I will thoroughly analyze your business's cash flow to identify any inefficiencies and areas for improvement. I'll provide detailed reports and actionable insights to help you optimize your financial operations."
   },
   {
     title: "Expense Management",
-    description: "We help you manage and reduce your business expenses by identifying unnecessary costs and suggesting more cost-effective alternatives. Our goal is to increase your profitability without sacrificing quality."
+    description: "I'll help you manage and reduce your business expenses by identifying unnecessary costs and suggesting more cost-effective alternatives. My goal is to increase your profitability without sacrificing quality."
   },
   {
     title: "Revenue Optimization",
-    description: "We work with you to develop strategies to increase your revenue. From pricing strategies to sales tactics, we provide comprehensive solutions tailored to your business needs."
+    description: "I'll work with you to develop strategies to increase your revenue. From pricing strategies to sales tactics, I provide comprehensive solutions tailored to your business needs."
   },
   {
     title: "Strategic Financial Planning",
-    description: "Our financial planning services help you create a roadmap for your business's financial future. We assist with budgeting, forecasting, and setting financial goals to ensure long-term success."
+    description: "Through financial planning services, I'll help you create a roadmap for your business's financial future. I assist with budgeting, forecasting, and setting financial goals to ensure long-term success."
   }
 ];
 
@@ -24,9 +24,9 @@ const Services = () => {
     <div id="services" className="mx-auto max-w-7xl p-6 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-x-12 gap-y-12">
       {/* Left Section: Title and Intro */}
       <div className="lg:col-span-3 mb-8 lg:mb-0">
-        <h1 className="text-4xl font-bold text-customBlue mb-6">Our Services</h1>
+        <h1 className="text-4xl font-bold text-customBlue mb-6">My Services</h1>
         <p className="text-gray-500">
-          Explore our tailored financial services designed to elevate your business&apos;s performance and secure its long-term success.
+          Explore my tailored financial services designed to elevate your business&apos;s performance and secure its long-term success.
         </p>
       </div>
 

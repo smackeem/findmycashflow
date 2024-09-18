@@ -36,8 +36,8 @@ const Socials = () => {
 
   return (
     <SocialsContainer >
-      <h1 className="text-2xl font-semibold mb-4 sm:text-center">Follow Us on Social Media</h1>
-      <div className="flex space-x-6 sm:justify-center sm:content-center">
+      <h1 className="text-2xl font-semibold mb-4 text-center">Follow Me on Social Media</h1>
+      <div className="flex space-x-6 justify-center content-center">
         <SocialLink
           href="https://www.instagram.com/findmycashflow/"
           target="_blank"

@@ -28,7 +28,7 @@ const CertificateSection = () => {
       <div className="text-white text-center flex flex-col justify-center content-center lg:text-left">
         <h2 className="text-3xl font-bold mb-4">Certified Treasury Professional</h2>
         <p className="text-lg text-gray-300">
-          Recognized for excellence in financial planning, this certificate demonstrates our commitment
+          Recognized for excellence in financial planning, this certificate demonstrates my commitment
           to helping you achieve financial stability and growth.
         </p>
       </div>

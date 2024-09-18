@@ -1,8 +1,26 @@
-import { useState } from "react";
-import logo from "../../assets/logo.png"
+import { useState, useEffect, useRef } from "react";
+import logo from "../../assets/logo.png";
 
 const Header = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false); // Close the dropdown if clicked outside
+      }
+    };
+
+    // Add event listener for clicks
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownRef]);
 
   return (
     <header className="fixed w-full bg-white shadow-md z-50">
@@ -27,7 +45,7 @@ const Header = () => {
             Home
           </a>
 
-          <div className="relative">
+          <div className="relative" ref={dropdownRef}>
             {/* About Menu */}
             <button
               onClick={() => setDropdownOpen(!isDropdownOpen)}
@@ -41,14 +59,14 @@ const Header = () => {
               <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md">
                 <a
                   href="/founder"
-                  className="block px-4 py-2 text-[#0D4A71] hover:bg-gray-100 transition duration-200"
+                  className="block px-4 py-2 text-[#0D4A71] hover:bg-[#0D4A71] hover:text-white transition duration-200"
                   onClick={() => setDropdownOpen(false)}
                 >
                   The Founder
                 </a>
                 <a
                   href="/elevate-your-business"
-                  className="block px-4 py-2 text-[#0D4A71] hover:bg-gray-100 transition duration-200"
+                  className="block px-4 py-2 text-[#0D4A71] hover:bg-[#0D4A71] hover:text-white transition duration-200"
                   onClick={() => setDropdownOpen(false)}
                 >
                   Elevate Your Business

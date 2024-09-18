@@ -19,7 +19,7 @@ const reasons = [
   },
   {
     title: "Difficulty in Decision Making",
-    content: "If you find yourself stuck or second-guessing every decision, a business coach can provide clarity, helping you make confident and informed choices.",
+    content: "If you find yourself stuck or second-guessing every decision, a business consultant can provide clarity, helping you make confident and informed choices.",
   },
   {
     title: "Outdated Business Practices",
@@ -27,7 +27,7 @@ const reasons = [
   },
   {
     title: "Uncertainty About Financial Health",
-    content: "If you’re unsure about your business’s financial status, a coach can help you gain clarity, ensuring you understand your financials and make decisions that drive profitability.",
+    content: "If you’re unsure about your business’s financial status, a consultant can help you gain clarity, ensuring you understand your financials and make decisions that drive profitability.",
   },
 ];
 
@@ -37,10 +37,10 @@ const ReasonsToHireConsultant = () => {
       {/* Left Section: Title */}
       <div className="lg:col-span-3 mb-8 lg:mb-0">
         <h1 className="text-4xl font-bold text-customBlue mb-4 lg:mb-6">
-          7 Reasons You May Need A Business Consultant
+          7 Reasons it&apos;s Time for you to Hire a Business Consultant
         </h1>
         <p className="text-gray-500">
-          Still uncertain? Contact us for tailored advice on how a business consultant can help you thrive.
+          Still uncertain? Contact me for tailored advice on how a business consultant can help you thrive.
         </p>
       </div>
 
