@@ -69,7 +69,7 @@ const Header = () => {
                   className="block px-4 py-2 text-[#0D4A71] hover:bg-[#0D4A71] hover:text-white transition duration-200"
                   onClick={() => setDropdownOpen(false)}
                 >
-                  Elevating Your Business
+                  Mission
                 </a>
               </div>
             )}
