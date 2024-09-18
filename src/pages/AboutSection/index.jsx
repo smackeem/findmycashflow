@@ -55,7 +55,7 @@ const AboutSection = () => {
             negotiating billion-dollar transactions that have saved millions.
           </p>
         </div>
-        <a href="/founder">
+        <a href="/the-founder">
           <button className="bg-customBlue text-white py-2 px-6 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300 mt-4">
             Learn More
           </button>

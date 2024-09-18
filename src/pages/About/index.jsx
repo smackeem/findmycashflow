@@ -1,9 +1,29 @@
 import { motion } from "framer-motion";
+import { Helmet } from 'react-helmet';
 import headshot from "../../assets/chri-headshot.jpg";
 
 const About = () => {
   return (
     <div id="aboutpage" className="container mx-auto px-6 lg:px-8 py-12">
+      <Helmet>
+        <title>The Founder</title>
+        <meta
+          name="description"
+          content="Learn more about Christopher Denham, the founder and visionary behind FindMyCashFlow."
+        />
+        <meta
+          property="og:title"
+          content="The Founder"
+        />
+        <meta
+          property="og:description"
+          content="FindMyCashFlow provides expert financial consulting services tailored to the needs of small businesses and entrepreneurs."
+        />
+        <meta
+          property="og:image"
+          content="https://www.findmycashflow.com/assets/chri-headshot.jpg"
+        />
+      </Helmet>
       {/* Hero Section */}
       <div className="lg:flex lg:space-x-12 mb-12">
         {/* Image Section */}

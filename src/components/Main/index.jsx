@@ -10,8 +10,8 @@ const Main = () => {
     return (
         <main className={isHome ? "pt-24" : "pt-32"}>
         <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/founder" element={<About />}/>
+        <Route exact path="/" element={<Home />}/>
+        <Route path="/the-founder" element={<About />}/>
         <Route path="/elevate-your-business" element={<MissionPage />}/>
         </Routes>
         </main>

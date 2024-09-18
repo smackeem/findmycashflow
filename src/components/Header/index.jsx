@@ -58,7 +58,7 @@ const Header = () => {
             {isDropdownOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md">
                 <a
-                  href="/founder"
+                  href="/the-founder"
                   className="block px-4 py-2 text-[#0D4A71] hover:bg-[#0D4A71] hover:text-white transition duration-200"
                   onClick={() => setDropdownOpen(false)}
                 >
@@ -69,7 +69,7 @@ const Header = () => {
                   className="block px-4 py-2 text-[#0D4A71] hover:bg-[#0D4A71] hover:text-white transition duration-200"
                   onClick={() => setDropdownOpen(false)}
                 >
-                  Elevate Your Business
+                  Elevating Your Business
                 </a>
               </div>
             )}

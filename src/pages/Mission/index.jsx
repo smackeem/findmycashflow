@@ -1,10 +1,30 @@
 import { motion } from "framer-motion";
+import { Helmet } from 'react-helmet';
 import team from "../../assets/team.jpg"; // Assuming path to the images
 import mission from "../../assets/warm-bulb.jpg"; // Assuming path to the images
 
 const MissionPage = () => {
   return (
     <div id="mission-page" className="container mx-auto px-6 lg:px-8 py-12">
+      <Helmet>
+        <title>Elevating Your Business</title>
+        <meta
+          name="description"
+          content="Learn more about FindMyCashFlow and how our financial consulting services help small businesses thrive."
+        />
+        <meta
+          property="og:title"
+          content="Elevating Your Business"
+        />
+        <meta
+          property="og:description"
+          content="FindMyCashFlow provides expert financial consulting services tailored to the needs of small businesses and entrepreneurs."
+        />
+        <meta
+          property="og:image"
+          content="https://www.findmycashflow.com/assets/warm-bulb.jpg"
+        />
+      </Helmet>
       
       {/* Mission Statement Section */}
       <div className="max-w-4xl mx-auto mb-12 text-center">
