@@ -106,7 +106,7 @@ const MissionPage = () => {
           animate={{ opacity: 1, translateY: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
         >
-          Let&apos;s connect to explore how I can assist you in realizing your business growth objectives.
+          Let&apos;s connect to discuss how I can assist you in realizing your business growth objectives.
         </motion.p>
       </div>
       <hr />

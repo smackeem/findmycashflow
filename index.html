@@ -24,6 +24,8 @@
     <!-- Author -->
     <meta name="author" content="Ackeem D. J. Smith" />
 
+    <meta name="application-name" content="FindMyCashFlow">
+
     <!-- Open Graph Meta Tags for Social Media -->
     <meta property="og:title" content="Find My Cash Flow" />
     <meta
@@ -49,6 +51,38 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://www.findmycashflow.com/bicon.png" />
 
+    <!-- Prevent Clickjacking -->
+<meta http-equiv="X-Frame-Options" content="deny">
+
+<!-- XSS protection -->
+<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+
+
+<!-- Referrer Policy -->
+<meta name="referrer" content="no-referrer">
+
+<!-- HTTP Strict Transport Security (HSTS) -->
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+
+<!-- Internet Explorer Compatibility -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Theme Color for mobile browsers -->
+<meta name="theme-color" content="#ffffff">
+
+<!-- Allow search engines to index the page -->
+<meta name="robots" content="index, follow">
+
+<!-- Prevent search engines from indexing a specific page -->
+<meta name="robots" content="noindex, nofollow">
+
+<!-- Declare the language of the document -->
+<meta http-equiv="Content-Language" content="en">
+
+<!-- Charset fallback -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -72,7 +106,7 @@
         "@type": "Organization",
         "name": "Find My Cash Flow",
         "url": "https://www.findmycashflow.com",
-        "logo": "https://www.findmycashflow.com/src/assets/logo.png",
+        "logo": "https://www.findmycashflow.com/bicon.png",
         "sameAs": [
           "https://www.facebook.com/findmycashflow",
           "https://www.linkedin.com/company/findmycashflow",
