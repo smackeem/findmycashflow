@@ -27,7 +27,7 @@ const AboutSection = () => {
             Business and Community.
           </p>
         </div>
-        <a href="/elevate-your-business">
+        <a href="/the-mission">
           <button className="bg-customBlue text-white py-2 px-6 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300 mt-4">
             Learn More
           </button>
@@ -83,7 +83,7 @@ const AboutSection = () => {
             efficiently and sustainably.
           </p>
         </div>
-        <a href="/elevate-your-business">
+        <a href="/the-mission">
           <button className="bg-customBlue text-white py-2 px-6 rounded-full font-semibold hover:bg-opacity-90 transition-colors duration-300 mt-4">
             Learn More
           </button>
